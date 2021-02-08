@@ -60,7 +60,7 @@ function App() {
         typeof weather.main !== 'undefined'
           ? weather.main.temp > 22
             ? 'app warm'
-            : 'app'
+            : 'app cold'
           : 'app'
       }
     >
@@ -75,8 +75,8 @@ function App() {
             onKeyPress={search}
           />
         </div>
-        {typeof weather.main != 'undefined' ? (
-          <div>
+        {typeof weather.main !== 'undefined' ? (
+          <div className="location-wrapper">
             <div className="location-box">
               <div className="location">
                 {weather.name}, {weather.sys.country}

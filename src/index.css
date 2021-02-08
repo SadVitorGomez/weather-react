@@ -9,14 +9,22 @@ html {
 }
 
 .app {
-  background-image: url(./assets/cold.jpg);
   background-size: cover;
   background-position: center;
   transition: 0.4s ease-in;
+  background-image: url(./assets/app.jpg);
+}
+
+.app.cold {
+  background-image: url(./assets/cold.jpg);
 }
 
 .app.warm {
   background-image: url(./assets/warm.jpg);
+}
+
+.app.clouds {
+  background-image: url(./assets/clouds.jpg);
 }
 
 main {
@@ -31,7 +39,8 @@ main {
 
 .search-box {
   width: 100%;
-  margin: 0 0 75px;
+  max-width: 800px;
+  margin: 0 auto 100px auto;
 }
 
 .search-box .search-bar {
@@ -52,6 +61,13 @@ main {
 
 .search-box .search-bar:focus {
   background-color: rgba(255, 255, 255, 0.75);
+}
+
+.location-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .location-box .location {
